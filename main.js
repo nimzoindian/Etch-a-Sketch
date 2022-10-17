@@ -5,10 +5,18 @@ function createGrid(rows, cols) {
     container.style.setProperty('--grid-cols', cols);
     for(let i = 0; i < (rows * cols); i++) {
         let cell = document.createElement('div');
-        cell.setAttribute('id',`box${i}`);
-        cell.innerText (i + 1);
-        container.appendChild(cell).className = 'grid-item';
+        cell.classList.add('grid-item');
+        cell.addEventListener('dragover', function onClick(event) {
+            event.target.style.backgroundColor = 'red';
+        });
+        cell.addEventListener('click', function onClick(event) {
+            event.target.style.backgroundColor = 'red';
+        });
+        container.appendChild(cell);
     }
+}
+
+function changeColor() {
 }
 
 createGrid(32, 32);

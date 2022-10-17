@@ -7,11 +7,25 @@
     display: grid;
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-gap: 2em;
+    height: 512px;
+    width: 512px;
+    border: 3px solid #ddd;
 }
 
 .grid-item {
-    padding: 1em;
-    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.canvas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    text-align: center;
+}
+
+.cc {
     text-align: center;
 }
