@@ -3,6 +3,10 @@
     --grid-rows: 1;
 }
 
+body {
+    font-family: 'Crimson Text', serif;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(var(--grid-cols), 1fr);
@@ -24,8 +28,54 @@
 
 .name {
     text-align: center;
+    font-size: xx-large;
+    margin-bottom: 0px;
 }
 
 .cc {
     text-align: center;
+    font-size: x-large;
+    margin-top: 0px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    width: 512px;
+    height: 64px;
+    border: 3px solid #ddd;
+    margin: auto;
+    margin-top: 6px;
+}
+
+#gridSize {
+    padding: 8px;
+    color: hsl(10, 25%, 20%);
+    background-color: hsl(40, 70%, 95%);
+    margin-left: 54px;
+}
+
+#defText {
+    margin-left: 24px;
+}
+
+#default {
+    margin-bottom: 4px;
+}
+
+#rainText {
+    margin-left: 24px;
+}
+
+#rainbow {
+    margin-bottom: 4px;
+}
+
+#shadText {
+    margin-left: 24px;
+}
+
+#shade {
+    margin-bottom: 4px;
+    margin-right: auto;
 }

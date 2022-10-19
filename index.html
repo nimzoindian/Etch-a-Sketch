@@ -7,6 +7,9 @@
     <title>Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
 </head>
 <body>
     <head class="top">
@@ -17,11 +20,22 @@
 
         </div>
     </div>
-
-    <div class="color-pallette">
-        
+    <div class="options">
+        <select id="gridSize">
+            <option value="16">16 X 16</option>
+            <option value="32">32 X 32</option>
+            <option value="48">48 X 48</option>
+            <option value="64">64 X 64</option>
+            <option value="80">80 X 80</option>
+            <option value="96">96 X 96</option>
+        </select>
+        <span id="defText">Black</span>
+        <input type="radio" name='modes' id="default" checked="checked">
+        <span id="rainText">Rainbow Mode!</span>
+        <input type="radio" name='modes' id="rainbow">
+        <span id="shadText">Shader</span>
+        <input type="radio" name='modes' id="shade">
     </div>
-
     <footer class="cc">
         <h6 class="credit">Created by Nimzoindian ~ CC 2022</h6>
     </footer>
