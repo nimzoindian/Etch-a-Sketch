@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
-
-function createGrid(rows, cols, col) {
+// Builds grid of '.grid-item cells and appends them to the container.
+function createGrid(rows, cols) {
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
     for(let i = 0; i < (rows * cols); i++) {
@@ -9,13 +9,14 @@ function createGrid(rows, cols, col) {
         container.appendChild(cell);
     }
 }
-
+// Grabs nodelist and removes each node from container
 function removeGrid() {
     document.querySelectorAll('.grid-item').forEach((e) => e.parentNode.removeChild(e));
 }
-
+// Conditional block to determine desired grid size from
+// users determined input in way of dropdown menu. Note:
+// When user changes size, grid is deleted, then built.
 document.getElementById('gridSize').onchange = getGridSize;
-
 function getGridSize() {
     let value = document.getElementById('gridSize').value;
     if (value == 16) {
@@ -41,37 +42,30 @@ function getGridSize() {
     }
 }
 
+// Returns rgba as string
 function randRGBA() {
     var o = Math.round, r = Math.random, s = 255;
     return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',1)';
 }
 
+// Add onclick functions to radio buttons.
 let rad1 = document.getElementById('default');
 rad1.setAttribute('onclick', 'detColor');
-
 let rad2 = document.getElementById('rainbow');
 rad2.setAttribute('onclick', 'detColor');
 
-let rad3 = document.getElementById('shade');
-rad3.setAttribute('onclick', 'detColor');
-
+// Creates an event listener for the container
+// of the grid.
+// Determines the mode selected.
 container.addEventListener('mouseover', detColor);
-
 function detColor(e) {
     if (e.target.matches('.grid-item')) {
         if (document.getElementById('rainbow').checked) {
             e.target.style.backgroundColor = randRGBA();
-            //container.querySelectorAll('.grid-item').forEach((e) => e.style.backgroundColor = randRGBA());
-        } else if (document.getElementById('shade').checked) {
-            e.target.style.filter = 'brightness(90%)';
         } else {
             e.target.style.backgroundColor = 'black';
         }
     }
 }
-
-//function shader() {
-
-//}
 
 getGridSize();

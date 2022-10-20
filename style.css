@@ -5,6 +5,7 @@
 
 body {
     font-family: 'Crimson Text', serif;
+    background-color: hsl(40, 70%, 95%);
 }
 
 .container {
@@ -14,6 +15,7 @@ body {
     height: 512px;
     width: 512px;
     border: 3px solid #ddd;
+    background-color: whitesmoke;
 }
 
 .grid-item {
@@ -46,36 +48,21 @@ body {
     border: 3px solid #ddd;
     margin: auto;
     margin-top: 6px;
+    justify-content: space-around;
+    background-color: hsl(40, 38%, 77%);
+    color: hsl(44, 34%, 32%);
 }
 
 #gridSize {
     padding: 8px;
     color: hsl(10, 25%, 20%);
     background-color: hsl(40, 70%, 95%);
-    margin-left: 54px;
-}
-
-#defText {
-    margin-left: 24px;
 }
 
 #default {
     margin-bottom: 4px;
 }
 
-#rainText {
-    margin-left: 24px;
-}
-
 #rainbow {
     margin-bottom: 4px;
-}
-
-#shadText {
-    margin-left: 24px;
-}
-
-#shade {
-    margin-bottom: 4px;
-    margin-right: auto;
 }
